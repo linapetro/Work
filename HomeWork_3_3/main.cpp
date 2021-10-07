@@ -15,7 +15,7 @@ int main()
     }
     unsigned int first_digit = n / pow(10, count - 1);
     unsigned int last_digit = n % 10;
-    unsigned new_number = 0;
+    unsigned int new_number = 0;
     new_number = n - last_digit;
     new_number = new_number - first_digit * pow(10, count - 1);
     new_number = new_number + first_digit;
