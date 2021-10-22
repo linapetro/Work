@@ -1,16 +1,12 @@
 //Необходимо определить количество цифр в введенном натуральном числе.
 #include <iostream>
+#include "CountDigits.h"
 
 int main()
 {
-    unsigned int N;
-    unsigned int count = 0;
+    unsigned int number;
     printf("Please enter a number: ");
-    scanf("%d", &N);
-    while(N > 0) {
-        N = N / 10;
-        count = count + 1;
-    }
-    printf("%d\n", count);
+    scanf("%d", &number);
+    printf("%d\n", CountDigits(number));
     return 0;
 }
