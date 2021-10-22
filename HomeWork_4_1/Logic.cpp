@@ -28,9 +28,3 @@ int LastNegativeIndex(int *array, int size)
     return index_last_negative;
 }
 
-void SwapElements(int *array, int index1, int index2)
-{
-    int c = array[index1];
-    array[index1] = array[index2];
-    array[index2] = c;
-}

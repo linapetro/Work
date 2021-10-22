@@ -12,6 +12,6 @@ void FillArray(int *array, int size);
 
 void PrintArray(int *array, int size);
 
-
+void SwapElements(int *array, int index1, int index2);
 
 #endif // ARRAY_H

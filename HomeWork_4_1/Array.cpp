@@ -29,6 +29,13 @@ void FillArray(int *array, int size)
     }
 }
 
+void SwapElements(int *array, int index1, int index2)
+{
+    int c = array[index1];
+    array[index1] = array[index2];
+    array[index2] = c;
+}
+
 
 void PrintArray(int *array, int size)
 {
