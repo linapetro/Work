@@ -8,7 +8,9 @@
 
 int main()
 {
-    constexpr int size = 40;
+    int size;
+    printf("Please enter array size: ");
+    scanf("%d", &size);
     int *M = CreateMass(size);
 
     Init();

@@ -2,9 +2,9 @@
 #include <time.h>
 
 
-int *CreateMass(int mass)
+int *CreateMass(int size)
 {
-    return (int*)malloc(mass * sizeof(int));
+    return new int[size];
 }
 
 void FreeMass(int *ptr)
@@ -12,7 +12,7 @@ void FreeMass(int *ptr)
     if(ptr == nullptr)
         return;
 
-    free(ptr);
+    delete[] ptr;
 }
 
 void Init()
