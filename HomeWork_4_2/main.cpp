@@ -1,52 +1,29 @@
 // Определить местоположение элементов массива А (30), не встречающихся в массиве В (15).
-#include <iostream>
-#include <stdlib.h>
-#include <time.h>
+#include <stdio.h>
+#include "Array.h"
+
 
 int main()
 {
-    constexpr int mass1 = 30;
-    int A[mass1] = {};
-    constexpr int mass2 = 15;
-    int B[mass2] = {};
+    constexpr int size1 = 30;
 
-    srand(time(nullptr));
+    constexpr int size2 = 15;
 
-    printf("Massive A: ");
+    int *A = CreateArray(size1);
 
-    for(int i = 0; i < mass1; ++i)
-    {
-       A[i] = rand() % 10;
-       printf("%d ", A[i]);
-    }
-    printf("\n");
+    int *B = CreateArray(size2);
 
-    printf("Massive B: ");
+    Init();
 
-    for(int i = 0; i < mass2; ++i)
-    {
-       B[i] = rand() % 10;
-       printf("%d ", B[i]);
-    }
-    printf("\n");
+    FillArray(A, B, size1, size2);
 
-    printf("Result:   ");
-    for(int i = 0; i < mass1; ++i)
-    {
-        bool found = false;
-        for(int j = 0; j < mass2; ++j)
-        {
-            if(A[i] == B[j])
-            {
-                found = true;
-                break;
-            }
-        }
-        if(!found)
-        {
-            printf("%d ", i);
-        }
-    }
+    PrintArray(A, B, size1, size2);
+
+    DetermineTheLocation(A, B, size1, size2);
+
+    FreeArray(A);
+
+    FreeArray(B);
 
     return 0;
 }
