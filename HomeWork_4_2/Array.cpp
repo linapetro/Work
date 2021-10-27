@@ -33,19 +33,11 @@ void FillArray(int *array1, int *array2, int size1, int size2)
     }
 }
 
-void PrintArray(int *array1, int *array2, int size1, int size2)
+void PrintArray(int *array1, int size1)
 {
-    printf("Massive A: ");
     for(int i = 0; i < size1; ++i)
     {
         printf("%d ", array1[i]);
-    }
-    printf("\n");
-
-    printf("Massive B: ");
-    for(int i = 0; i < size2; ++i)
-    {
-        printf("%d ", array2[i]);
     }
     printf("\n");
 }
