@@ -1,7 +1,7 @@
 // Определить местоположение элементов массива А (30), не встречающихся в массиве В (15).
 #include <stdio.h>
 #include "Array.h"
-
+#include "DetermineTheLocation.h"
 
 int main()
 {
